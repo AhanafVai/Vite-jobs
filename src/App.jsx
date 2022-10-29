@@ -6,11 +6,12 @@ const App = () => {
   return (
     <>
       <div className="header container"></div>
-      <div style={{ marginTop: "57px", marginBottom: "30px" }}>
-        {data.map((info) => (
+
+      {data.map((info) => (
+        <div key={info.id} style={{ marginTop: "57px", marginBottom: "30px" }}>
           <Card info={info} />
-        ))}
-      </div>
+        </div>
+      ))}
 
       {/* <!-- Item Start -->
   Photosnap

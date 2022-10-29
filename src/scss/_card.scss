@@ -6,16 +6,43 @@
   border-radius: 10px;
   margin-bottom: 40px;
 
+  @include breakpoint-up(large) {
+    width: 1120px;
+  }
+
   &__img {
-    position: absolute;
-    top: -25px;
-    left: 25px;
     width: 50px;
     height: 50px;
+    &-mobile {
+      position: absolute;
+      top: -25px;
+      left: 25px;
+    }
+    &-desktop {
+      width: 90px;
+      height: 90px;
+      position: static;
+    }
   }
+
   &__description {
+    @include breakpoint-up(large) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &-left {
+      @include breakpoint-up(large) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
     &--p {
       padding: 20px 25px;
+      @include breakpoint-up(large) {
+        padding: 5px;
+      }
     }
   }
   &__header {
@@ -47,6 +74,10 @@
     color: $desaturatedDarkCyan;
     padding: 10px;
     margin-right: 15px;
+    margin-bottom: 15px;
     border-radius: 5px;
+    @include breakpoint-down(small) {
+      display: inline-block;
+    }
   }
 }

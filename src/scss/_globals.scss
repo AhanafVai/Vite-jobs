@@ -88,3 +88,14 @@ a:hover {
 .px {
   padding: 0 20px;
 }
+
+.hidden {
+  @include breakpoint-up(large) {
+    display: none;
+  }
+}
+.hidden-mobile {
+  @include breakpoint-down(small) {
+    display: none;
+  }
+}
