@@ -1,9 +1,17 @@
 import React from "react";
+import Card from "./Components/Card";
+import data from "./Data/data";
 
 const App = () => {
   return (
     <>
-      <h1>This is the app inter face</h1>
+      <div className="header container"></div>
+      <div style={{ marginTop: "57px", marginBottom: "30px" }}>
+        {data.map((info) => (
+          <Card info={info} />
+        ))}
+      </div>
+
       {/* <!-- Item Start -->
   Photosnap
   New!
