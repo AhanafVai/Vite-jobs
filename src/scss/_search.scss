@@ -1,0 +1,43 @@
+.search {
+  display: flex;
+  justify-content: center;
+  margin-top: -35px;
+  &__bar {
+    display: flex;
+    width: 330px;
+    height: auto;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    @include breakpoint-up(large) {
+      width: 1110px;
+    }
+  }
+  &__categories {
+    display: flex;
+    justify-content: center;
+  }
+  &__category {
+    width: auto;
+    background-color: $lighterGrayishCyan;
+    color: $desaturatedDarkCyan;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 5px;
+    @include breakpoint-down(small) {
+      display: inline-block;
+    }
+    @include breakpoint-up(large) {
+      display: inline-block;
+    }
+    &-close {
+      cursor: pointer;
+      background-color: $lighterGrayishCyan;
+      color: $desaturatedDarkCyan;
+      &:hover {
+        background-color: $veryDarkGrayishCyan;
+        color: white;
+      }
+    }
+  }
+}
