@@ -1,25 +1,21 @@
 import React from "react";
-import Card from "./Components/Card";
+import CardList from "./Components/CardList";
 import Search from "./Components/Search";
-import data from "./Data/data";
+import { SearchProvider } from "./Context/SearchContext";
 
 const App = () => {
   return (
-    <>
+    <SearchProvider>
       <div className="header container"></div>
       <Search />
-      {data.map((info) => (
-        <div key={info.id} style={{ marginTop: "57px", marginBottom: "30px" }}>
-          <Card info={info} />
-        </div>
-      ))}
-    </>
+      <CardList />
+    </SearchProvider>
   );
 };
 
 export default App;
 
-//  <div class="attribution">
+//  <div className="attribution">
 //    Challenge by{" "}
 //    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
 //      Frontend Mentor

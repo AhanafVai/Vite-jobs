@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import SearchContext from "../Context/SearchContext";
 
 const Card = ({ info }) => {
+  const { filterRole } = useContext(SearchContext);
+
   return (
     <div className="card container">
       <figure className="hidden">
@@ -42,7 +45,12 @@ const Card = ({ info }) => {
 
         <div className="card__description-right ">
           <section className="card__categories ">
-            <span className="card__category">{info.role}</span>
+            <span
+              onClick={() => filterRole(info.role)}
+              className="card__category"
+            >
+              {info.role}
+            </span>
             <span className="card__category">{info.level}</span>
             {info.languages.map((language, i) => (
               <span key={i} className="card__category">
