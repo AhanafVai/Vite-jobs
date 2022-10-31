@@ -39,6 +39,7 @@
   margin-top: -35px;
   &__bar {
     display: flex;
+    flex-wrap: wrap;
     width: 330px;
     height: auto;
     background-color: white;
@@ -49,21 +50,32 @@
     }
   }
 
-  &__categories {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 20px;
-    text-align: center;
-  }
   &__category {
-    width: auto;
+    list-style: none;
+    display: flex;
+    align-items: center;
     background-color: $lighterGrayishCyan;
     color: $desaturatedDarkCyan;
-    padding: 10px;
-    &-close {
-      width: 30px;
+    padding: 0 0 0 0.5rem;
+    margin: 10px;
+    font-weight: $font-bold;
+    border-radius: 5px;
+    border: none;
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+    .close {
+      background-color: $lighterGrayishCyan;
+      color: $desaturatedDarkCyan;
+      font-weight: $font-bold;
+      border: none;
+      border-radius: 0 5px 5px 0;
+      cursor: pointer;
+      margin-left: 0.5rem;
+      transition: all 0.2s;
+
       &:hover {
-        background-color: $veryDarkGrayishCyan;
+        background-color: $darkGrayishCyan;
         color: white;
       }
     }

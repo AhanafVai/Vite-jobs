@@ -6,11 +6,11 @@ const CardList = () => {
   const { item } = useContext(SearchContext);
   return (
     <>
-      {item.map((info) => (
-        <div key={info.id} style={{ marginTop: "57px", marginBottom: "30px" }}>
+      <div style={{ marginTop: "100px", marginBottom: "30px" }}>
+        {item.map((info) => (
           <Card info={info} />
-        </div>
-      ))}
+        ))}
+      </div>
     </>
   );
 };

@@ -5,21 +5,28 @@ const SearchContext = createContext();
 
 export const SearchProvider = ({ children }) => {
   const [item, setItem] = useState(Data);
-  const [selected, setSelected] = useState("");
+  const [filterKeywords, setFilterKeywords] = useState([]);
 
-  // ? Filters
-  const filterRole = (role) => {
-    setItem(item.filter((item) => item.role === role));
-    setSelected(role);
+  // add search item
+  const addFilterKeywords = (data) => {
+    if (!filterKeywords.includes(data)) {
+      setFilterKeywords([...filterKeywords, data]);
+    }
+  };
+
+  // delete item
+  const deleteFilterKeywords = (data) => {
+    const searchKeywords = filterKeywords.filter((keyword) => keyword !== data);
+    setFilterKeywords(searchKeywords);
   };
 
   return (
     <SearchContext.Provider
       value={{
         item,
-        filterRole,
-
-        selected,
+        addFilterKeywords,
+        deleteFilterKeywords,
+        filterKeywords,
       }}
     >
       {children}

@@ -1,12 +1,13 @@
 import React from "react";
 import CardList from "./Components/CardList";
+import Header from "./Components/Header";
 import Search from "./Components/Search";
 import { SearchProvider } from "./Context/SearchContext";
 
 const App = () => {
   return (
     <SearchProvider>
-      <div className="header container"></div>
+      <Header />
       <Search />
       <CardList />
     </SearchProvider>
