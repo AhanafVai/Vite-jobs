@@ -6,6 +6,9 @@
   border-radius: 10px;
   margin-bottom: 40px;
 
+  @include breakpoint-up(medium) {
+    width: 780px;
+  }
   @include breakpoint-up(large) {
     width: 1120px;
   }

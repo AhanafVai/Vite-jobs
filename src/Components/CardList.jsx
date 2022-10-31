@@ -3,14 +3,14 @@ import SearchContext from "../Context/SearchContext";
 import Card from "./Card";
 
 const CardList = () => {
-  const { item } = useContext(SearchContext);
+  const { filteredData } = useContext(SearchContext);
   return (
     <>
-      <div style={{ marginTop: "100px", marginBottom: "30px" }}>
-        {item.map((info) => (
+      {filteredData.map((info) => (
+        <div key={info.id} style={{ marginTop: "100px", marginBottom: "30px" }}>
           <Card info={info} />
-        ))}
-      </div>
+        </div>
+      ))}
     </>
   );
 };

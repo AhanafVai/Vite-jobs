@@ -2,10 +2,11 @@ import React, { useContext } from "react";
 import SearchContext from "../Context/SearchContext";
 
 const Search = () => {
-  const { filterKeywords, deleteFilterKeywords } = useContext(SearchContext);
+  const { filterKeywords, deleteFilterKeywords, clearAll } =
+    useContext(SearchContext);
   return (
     <div className="search">
-      <div className="search__bar">
+      <ul className="search__bar">
         {filterKeywords.map((keyword, i) => (
           <li key={i} className="search__category">
             {keyword}
@@ -17,7 +18,8 @@ const Search = () => {
             </button>
           </li>
         ))}
-      </div>
+        {filterKeywords.length > 0 && <span onClick={clearAll}>Clear</span>}
+      </ul>
     </div>
   );
 };
