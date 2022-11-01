@@ -1,25 +1,25 @@
 .search {
   display: flex;
   justify-content: center;
-  margin-top: -35px;
+  margin-top: -30.31rem;
   &__bar {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    width: 330px;
+    width: 20.63rem;
     height: auto;
     background-color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 0.31rem;
     @include breakpoint-up(large) {
-      width: 1110px;
+      width: 110.63rem;
     }
 
     span {
       color: $darkGrayishCyan;
       text-decoration: none;
       padding: 0 0 0 0.5rem;
-      margin: 10px;
+      margin: 0.63rem;
       &:hover {
         color: $veryDarkGrayishCyan;
         text-decoration: underline;
@@ -33,9 +33,9 @@
     align-items: center;
     background-color: $lighterGrayishCyan;
     color: $desaturatedDarkCyan;
-    margin: 10px 10px 10px 0px;
+    margin: 0.63rem 0.63rem 0.63rem 0;
     font-weight: $font-bold;
-    border-radius: 5px;
+    border-radius: 0.31rem;
     border: none;
     &:not(:last-child) {
       margin-right: 1rem;
@@ -45,7 +45,7 @@
       color: $desaturatedDarkCyan;
       font-weight: $font-bold;
       border: none;
-      border-radius: 0 5px 5px 0;
+      border-radius: 0 0.31rem 0.31rem 0;
       cursor: pointer;
       margin-left: 0.5rem;
       transition: all 0.2s;

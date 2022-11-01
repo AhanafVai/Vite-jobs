@@ -1,13 +1,13 @@
 .header {
   background-image: url("/images/bg-header-mobile.svg");
   background-repeat: no-repeat;
-  width: 375px;
-  height: 154px;
+  width: 23.44rem;
+  height: 9.63rem;
   background-color: hsl(180, 29%, 50%);
 
   @include breakpoint-up(medium) {
     background-image: url("/images/bg-header-desktop.svg");
-    width: 1440px;
-    height: 160px;
+    width: 90rem;
+    height: 10rem;
   }
 }

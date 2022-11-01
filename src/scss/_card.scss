@@ -1,29 +1,29 @@
 .card {
   position: relative;
-  width: 340px;
+  width: 21.25rem;
   height: auto;
   background-color: #ffffff;
-  border-radius: 10px;
-  margin-bottom: 40px;
+  border-radius: 0.63rem;
+  margin-bottom: 2.5rem;
 
   @include breakpoint-up(medium) {
-    width: 780px;
+    width: 48.75 rem;
   }
   @include breakpoint-up(large) {
-    width: 1120px;
+    width: 70rem;
   }
 
   &__img {
-    width: 50px;
-    height: 50px;
+    width: 3.13rem;
+    height: 3.13rem;
     &-mobile {
       position: absolute;
       top: -25px;
       left: 25px;
     }
     &-desktop {
-      width: 90px;
-      height: 90px;
+      width: 5.63rem;
+      height: 5.63rem;
       position: static;
     }
   }
@@ -42,9 +42,9 @@
       }
     }
     &--p {
-      padding: 20px 25px;
+      padding: 1.25rem 1.56rem;
       @include breakpoint-up(large) {
-        padding: 20px 10px;
+        padding: 1.25rem 0.63rem;
       }
     }
   }
@@ -54,20 +54,20 @@
   }
 
   &__header {
-    margin-top: 20px;
+    margin-top: 1.25rem;
     @include breakpoint-up(large) {
       margin-top: 0px;
     }
     .company {
       color: $desaturatedDarkCyan;
-      margin-right: 20px;
+      margin-right: 1.25rem;
     }
     .label {
       background-color: $desaturatedDarkCyan;
       color: aliceblue;
-      padding: 5px 10px;
-      border-radius: 20px;
-      margin-right: 10px;
+      padding: 0.31rem 0.63rem;
+      border-radius: 1.25rem;
+      margin-right: 0.63rem;
       &-dark {
         background-color: black;
       }
@@ -83,10 +83,10 @@
     width: auto;
     background-color: $lighterGrayishCyan;
     color: $desaturatedDarkCyan;
-    padding: 10px;
-    margin-right: 15px;
-    margin-top: 20px;
-    border-radius: 5px;
+    padding: 0.63rem;
+    margin-right: 0.94rem;
+    margin-top: 1.25rem;
+    border-radius: 0.31rem;
     border: none;
     &:hover {
       background-color: $veryDarkGrayishCyan;
