@@ -58,15 +58,6 @@ Following are the lessons I learned through this project.
 - filter functionality
 - Props destructuring
 
-```html
-<ul>
-  <li>
-    <button>X</button>
-  </li>
-  <span>Clear</span>
-</ul>
-```
-
 ```SCSS
 /* centering position */
 .search {
